@@ -1,0 +1,23 @@
+/* Estilo para el icono */
+body{
+  background-image: url('/img/bg.png');
+}
+
+.icono-cargar {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para ocultar el input de tipo file */
+  input[type="file"] {
+    display: none;
+  }
