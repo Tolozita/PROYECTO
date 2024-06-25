@@ -1,126 +1,155 @@
-body, html {
+:root {
+    --primary-color: #ffffff; /* Color primario */
+    --secondary-color: #333333; /* Color secundario */
+    --accent-color: #060606; /* Color de acento */
+    --background-color: rgba(0, 0, 0, 0.483); /* Color de fondo */
+    --input-background: rgba(113, 113, 113, 0.978); /* Color de fondo del input */
+    --border-color-light: rgba(255, 255, 255, 0.681); /* Color de borde claro */
+    --border-color-medium: rgb(89, 89, 89); /* Color de borde medio */
+    --border-color-dark: rgb(0, 0, 0); /* Color de borde oscuro */
+}
+
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    background-color: rgb(49, 108, 243);
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-}
-
-.card_content{
-    display: flex;
-    width: 50%;
-    height: 50%;
-    background-color: rgb(255, 255, 255);
-    justify-content: space-between;
-    align-self: center;
-    border-radius: 50px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Aquí se establece la sombra */
-}
-
-.card_L{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
-    width: 50%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+    background: url(/PROYECTO/img/bg2.jpg) no-repeat;
 }
 
-.CL_imagen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.wrapper {
+    width: auto;
+    background-color: var(--background-color);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 30px 40px;
 }
 
-
-.CL_imagen img {
-    transition: filter 0.3s ease;
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
 }
 
-.CL_imagen img:hover {
-    -webkit-filter: drop-shadow(-5px -5px 10px rgb(255, 25, 25));
-    filter: drop-shadow(-5px -5px 10px rgb(0, 140, 255));
-}
-
-.card_R{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    width: 50%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-}
-
-
-/* CSS */
-.button-29 {
-  align-items: center;
-  appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-  border: 0;
-  border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
-  height: 48px;
-  width: auto;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
-}
-
-.button-29:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-}
-
-.button-29:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
-
-.button-29:active {
-  box-shadow: #3c4fe0 0 3px 7px inset;
-  transform: translateY(2px);
-}
-
-
- /* Estilos para los iconos */
- .input-container {
+.wrapper .input-box {
     position: relative;
-    margin-bottom: 15px;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    background-color: var(--input-background);
+    border-radius: 40px;
 }
 
-.input-container input {
-    padding-left: 30px; /* Ajuste el espacio para el icono */
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid var(--border-color-light);
+    border-radius: 40px;
+    font-size: 16px;
+    color:var(--primary-color);
+    padding: 20px 25px;
 }
 
-.symbol-input100 {
+.input-box input:hover {
+    border-color: var(--border-color-medium);
+    transition: 0.4s;
+}
+
+.input-box input:focus {
+    border-color: var(--border-color-dark);
+}
+
+.input-box input::placeholder {
+    color: var(--primary-color);
+}
+
+.input-box i {
     position: absolute;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    left: 10px;
-    color: #999; /* Color del icono */
+    font-size: 20px;
+    color: var(--accent-color);
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: var(--primary-color);
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: var(--primary-color);
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+.wrapper .boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .btn {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.wrapper .btn-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    text-align: center;
+    text-decoration: none;
+    color: var(--secondary-color);
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.wrapper .btn-link:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
 }
