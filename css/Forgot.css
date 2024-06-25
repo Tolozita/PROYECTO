@@ -24,7 +24,7 @@ body {
 }
 
 .wrapper {
-    width: auto;
+    max-width: 425px;
     background-color: var(--background-color);
     color:var(--primary-color);
     border-radius: 10px;
