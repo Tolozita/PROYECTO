@@ -45,7 +45,7 @@ body {
     border-radius: 40px;
 }
 
-.input-box input {
+.input-box input{
     width: 100%;
     height: 100%;
     background: transparent;
@@ -136,4 +136,12 @@ body {
     text-decoration: underline;
     color: var(--secundary-color);
     transition: 0.4s;
+}
+
+.input-box input.error {
+    border: solid 2px rgb(138, 0, 0);
+}
+
+.input-box input.verify {
+    border: solid 2px rgb(38, 190, 0);
 }

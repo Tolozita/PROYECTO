@@ -14,27 +14,27 @@
         <form action="">
             <h1>Registro</h1>
             <div class="input-box">
-                <input type="text" placeholder="Nombre" required>
+                <input type="text" id="nombre" placeholder="Nombre" autocomplete="off" >
             </div>
 
             <div class="input-box">
-                <input type="text" placeholder="Apellido" required>
+                <input type="text" id="apellido" placeholder="Apellido" autocomplete="off" >
             </div>
 
             <div class="input-box">
-                <input type="email" placeholder="Correo Electronico" required>
+                <input type="email"  id="email" placeholder="Correo Electronico" autocomplete="off">
             </div>
 
             <div class="input-box">
-                <input type="password" placeholder="Contraseña" required>
+                <input type="password" id="password" placeholder="Contraseña" autocomplete="off">
             </div>
 
             <div class="remember-forgot">
-                <label><input type="checkbox">Recordarme</label>
+                <label><input type="checkbox" id="politicas">Recordarme</label>
 
             </div>
 
-            <button type="submit" class="btn">Registrarse</button>
+            <button type="submit" id="botoncito" class="btn" >Registrarse</button>
 
             <div class="register-link">
                 <p>Ya tengo una cuenta <a href="./Auth.html">Inicar Sesion</a></p>
@@ -42,6 +42,9 @@
 
 
         </form>
+
+        <script src="/JS/Auth.Validation.js"></script>
+
     </div>
 </body>
 </html>
